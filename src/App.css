@@ -1,0 +1,133 @@
+.header{
+  text-align: center;
+  font-weight: normal !important;
+  padding: 10px;
+  margin: 10px;
+}
+.totalBalance{
+  text-align: center;
+  font-weight: lighter !important;
+  margin-top: 0px;
+  padding: 0px;
+}
+.balance1{
+    padding-top: 0px !important;  
+    margin: 0 !important;
+    line-height: 2px;
+}
+.account-output{
+   background-color: white;
+   box-shadow: 0 0 10px gray;
+   height: 90px !important;
+   width: 350px !important;
+   display: flex;
+   padding: 20px;
+   justify-content: space-around !important;
+   margin: 20px 0;
+   margin-left: 335px !important;
+   margin-top: 20px;
+}
+.summary-plus{
+  font-weight: bolder;
+  font-size: 20px;
+  color: limegreen;
+}
+.summary-minus{
+  font-weight: bold;
+  font-size: 20px;
+  color: maroon;
+}
+.trans-his{
+  text-align: center !important;
+  /* margin: 20px 0; */
+  margin-top: 40px !important;
+}
+.trans-his > hr{
+  width: 450px;
+}
+.list{
+  list-style-type: none;
+  padding: 10px 10px;
+  margin-bottom: 40px;
+  width: 400px;
+  margin-left: 330px !important;
+}
+
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+  box-shadow: 0 0 10px gray;
+}
+
+.list li.plus {
+  border-right: 5px solid limegreen;
+}
+
+.list li.plus:hover {
+  border-right: 5px solid limegreen;
+  background-color: limegreen;
+  color: #f7f7f7
+}
+
+.list li.minus {
+  border-right: 5px solid maroon;
+}
+
+.list li.minus:hover {
+  border-right: 5px solid maroon;
+  background-color: maroon;
+  color: #f7f7f7
+}
+
+
+.delete-button{
+  cursor: pointer;
+  background-color: darkred;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+   padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  /* opacity: 0 ; */
+  transition: opacity 0.3s ease; 
+}
+ list li:hover .delete-button { 
+  opacity: 1;
+ }
+input{
+  border: darkblue;
+  padding: 10px 10px !important;
+  width: 400px;
+  color: white;
+  box-shadow: 0 0 10px darkblue;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.btn{
+  cursor: pointer;
+  background-color: lightsteelblue;
+  box-shadow: 0 0 10px darkslateblue;
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 420px;
+  margin-left: 315px !important;
+  font-weight: bold;
+}
+.btn:focus,
+.delete-btn:focus {
+  outline: 5px;
+}
