@@ -1,11 +1,14 @@
 // eslint-disable-next-line
-const AppReducer =((state,action) =>{
+const AppReducer =(state,action) =>{
     switch(action.type){
-        case "ADD_TRANSACTION":{
-       return [action.payload, ...state]   
+        case 'DELETE_TRANSCATION':
+        return{
+            ...state,
+            trancations: state.trancations.filter(transcation =>  transcation.id !== action.payload)  
         }
         default:
-            return state
+            return state;
     }
-})
+}
+
 export default AppReducer;

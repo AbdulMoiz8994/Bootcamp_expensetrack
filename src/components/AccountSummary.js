@@ -8,15 +8,16 @@ const {transcations}=useContext(GlobalContext);
 // console.log(transcations);
 
 const amounts = transcations.map((transaction) => transaction.amount);
-console.log(amounts);
 
 const income =  amounts   
         .filter(item=> item > 0)
-        .reduce((acc, item) => (acc += item),0).toFixed(2);
+        .reduce((acc, item) => (acc += item),0)
+        .toFixed(2);
 
     const expense =(amounts
         .filter(item => item < 0)
-        .reduce((acc, item) => (acc += item),0).toFixed(2));
+        .reduce((acc, item) => (acc += item),0)
+        .toFixed(2));
 
 
 

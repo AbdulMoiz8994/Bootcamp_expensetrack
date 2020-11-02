@@ -1,7 +1,12 @@
-import React from 'react'
+import React,{useContext} from 'react'
+
+// import global context
+import {GlobalContext} from '../Context/GlobalContext';
+
 
 export const Transcation = ({ transcation }) => {
-
+const { delTransaction } =useContext(GlobalContext) 
+console.log(delTransaction)
 const sign=transcation.amount > 0? "+" : "-";
 const transcationType= transcation.amount > 0? "plus" : "minus"; 
   return (
@@ -9,7 +14,7 @@ const transcationType= transcation.amount > 0? "plus" : "minus";
       <li className={transcationType}>
         {transcation.description}
     <span>{sign}${Math.abs (transcation.amount)}</span>
-        <button className="delete-button">X</button>
+        <button className="delete-button" onClick={() => delTransaction(transcation.id)}>X</button>
       </li>
   )
 }

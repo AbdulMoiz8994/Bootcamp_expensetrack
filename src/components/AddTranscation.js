@@ -18,7 +18,7 @@ const[amount, setAmount]=useState(0);
         <div className="trans-his">
             <h2>Add New Transcation</h2>
             <hr /> 
-            <from>
+            <form>
                 <div className="from-control">
                     <label  htmlFor="description">Description</label><br />
                     <input 
@@ -43,7 +43,7 @@ const[amount, setAmount]=useState(0);
                 </div>
                 <br />
                 <button className="btn" type="submit">Add Transcation</button>
-            </from>
+            </form>
         </div>
     )
 }
