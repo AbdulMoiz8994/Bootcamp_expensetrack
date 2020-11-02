@@ -1,6 +1,9 @@
 // eslint-disable-next-line
 import React,{useState,useContext} from 'react'
+
+
 import { GlobalContext } from '../Context/GlobalContext';
+
 
 export const AddTranscation = () => {
 
@@ -8,7 +11,18 @@ export const AddTranscation = () => {
 const[description, setDescription]=useState("");
 const[amount, setAmount]=useState(0);
 
+const { addTransaction } =useContext(GlobalContext);
 
+const onSubmit= e=>{
+    e.preventDefault();
+
+   const newTranscation={
+       id: Math.floor(Math.random() *100000000),
+       description,
+       amount: +amount
+   } 
+   addTransaction(newTranscation)
+}
 
 
 
@@ -18,7 +32,7 @@ const[amount, setAmount]=useState(0);
         <div className="trans-his">
             <h2>Add New Transcation</h2>
             <hr /> 
-            <form>
+            <form onSubmit={onSubmit}>
                 <div className="from-control">
                     <label  htmlFor="description">Description</label><br />
                     <input 

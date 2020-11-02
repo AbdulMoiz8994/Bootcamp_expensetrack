@@ -4,8 +4,13 @@ const AppReducer =(state,action) =>{
         case 'DELETE_TRANSCATION':
         return{
             ...state,
-            trancations: state.trancations.filter(transcation =>  transcation.id !== action.payload.id)  
+            transcations: state.transcations.filter(transcation =>  transcation.id !== action.payload)  
         }
+        case 'ADD_TRANSCATION':
+         return{
+             ...state,
+              transcations: [action.payload, ...state.transcations]   
+         }   
         default:
             return state;
     }

@@ -40,7 +40,8 @@ function addTransaction(transcation){
            <GlobalContext.Provider value={
            {
                transcations: state.transcations,
-               delTransaction
+               delTransaction,
+               addTransaction
            }   
            }>
 
