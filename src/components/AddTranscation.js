@@ -1,10 +1,17 @@
 // eslint-disable-next-line
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
+import { GlobalContext } from '../Context/GlobalContext';
 
 export const AddTranscation = () => {
 
-const[description, setDescription]=useState();
+
+const[description, setDescription]=useState("");
 const[amount, setAmount]=useState(0);
+
+
+
+
+
 
 
     return (
