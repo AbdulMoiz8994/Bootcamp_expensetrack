@@ -27,13 +27,13 @@ const income =  amounts
             <div className="summary-div">
          <h3>Income</h3>
          <p className="summary-plus">
-            {income}
+            ${income}
          </p>
             </div>
             <div className="summary-div">
        <h3>Expense</h3>
        <p className="summary-minus">
-           {expense}
+           ${expense}
        </p>
             </div>
         </div>
