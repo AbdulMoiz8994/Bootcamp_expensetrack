@@ -22,6 +22,9 @@ const onSubmit= e=>{
        amount: +amount
    } 
    addTransaction(newTranscation)
+
+   setDescription("");
+   setAmount(0);
 }
 
 

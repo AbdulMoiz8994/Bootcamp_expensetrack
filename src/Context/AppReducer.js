@@ -4,7 +4,7 @@ const AppReducer =(state,action) =>{
         case 'DELETE_TRANSCATION':
         return{
             ...state,
-            transcations: state.transcations.filter(transcation =>  transcation.id !== action.payload)  
+            transcations: state.transcations.filter(transcation =>  transcation !== action.payload)  
         }
         case 'ADD_TRANSCATION':
          return{

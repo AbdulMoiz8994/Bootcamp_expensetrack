@@ -7,12 +7,7 @@ import AppReducer from './AppReducer.js';
 
 
 const InitState =  {
-    transcations: [
-        {id:1,description:"Income1",amount:1000},
-        {id:2,description:"Expense1",amount:-100},
-        {id:3,description:"Income2",amount:2000},
-        {id:4,description:"Expense2",amount:-200}
-    ]
+    transcations: []
 }
 
 export const GlobalContext=createContext(InitState);
@@ -23,10 +18,10 @@ export const GlobalContext=createContext(InitState);
 export const GlobalProvider=({children}) =>{
    let [state, dispatch]=useReducer(AppReducer,InitState)
 
-function delTransaction(id){ 
+function delTransaction(transcation){ 
    dispatch({
        type: 'DELETE_TRANSCATION',
-       payload: id  
+       payload: transcation  
 })
 }
 function addTransaction(transcation){ 
